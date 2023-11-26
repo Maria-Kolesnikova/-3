@@ -1,13 +1,12 @@
-# TODO Напишите функцию для поиска индекса товара
-def funct(list, pos):
-    for name in list:
-        if name == pos:
-            return list.index(name)
+def find_first_occurrence(items, item):
+    for index, current_item in enumerate(items):
+        if current_item == item:
+            return index
 
 items_list = ['яблоко', 'банан', 'апельсин', 'груша', 'киви', 'банан']
 
 for find_item in ['банан', 'груша', 'персик']:
-    index_item = funct(items_list, find_item)  # TODO Вызовите функцию, что получить индекс товара
+    index_item = find_first_occurrence(items_list, find_item)
     if index_item is not None:
         print(f"Первое вхождение товара '{find_item}' имеет индекс {index_item}.")
     else:
